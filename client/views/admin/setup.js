@@ -9,6 +9,7 @@ Template.adminSetup.events({
                 console.log(err);
                 return;
             }
+            Config.completeSetup();
             Router.go('admin');
         });
     }

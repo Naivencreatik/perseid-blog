@@ -51,10 +51,8 @@ Router.configure({
 
 /* First time run redirection */
 Deps.autorun(function(c){
-    if(!Meteor.loggingIn()){
-        if (Meteor.users.find().count() === 0){
-            Router.go('adminSetup');
-        }
-        c.stop();
+    var setup = Config.findOne({_id: 'setup'});
+    if(setup && !setup.completed){
+        Router.go('adminSetup');
     }
 });
