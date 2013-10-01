@@ -1,26 +1,28 @@
-Template.postEditor.rendered = function () {
-    if (this._epicEditor) {
-        this._epicEditor.unload();
-    }
-
-    this._epicEditor = new EpicEditor({
-        container: this.find(".epic-editor"),
-        basePath: '/epiceditor/',
-        theme: {
-            base:    'epiceditor.css',
-            preview: 'preview-dark.css',
-            editor:  'epic-dark.css'
-        },
-    }).load();
-};
-
-Template.postEditor.destroyed = function () {
-    this._epicEditor.unload();
-};
+var cm;
 
 Template.postEditor.events({
     "click .post-editor-save": function (event, template){
-        Posts.save(template._epicEditor.exportFile());
-        template._epicEditor.importFile('');
+        Posts.save(Session.get("postDraftRaw"));
+        cm.setValue("");
+        cm.clearHistory();
+    }
+});
+
+Template.postEditorCodeMirror.rendered = function () {
+    cm = CodeMirror(this.firstNode, {
+      value: Session.get("postDraftRaw") || "",
+      mode:  "markdown"
+    });
+
+    cm.focus();
+
+    cm.on("change", function(){
+        Session.set("postDraftRaw", cm.getValue());
+    });
+};
+
+Template.postEditorPreview.helpers({
+    "postDraftRaw": function(){
+        return Session.get("postDraftRaw");
     }
 });

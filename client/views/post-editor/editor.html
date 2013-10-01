@@ -1,7 +1,27 @@
 <template name="postEditor">
     <section class="post-editor">
-        <h2>Editor</h2>
-        <div class="epic-editor"></div>
+        <h2>New post</h2>
+        <div class="post-editor-split">
+            {{> postEditorCodeMirror}}
+            {{> postEditorPreview}}
+        </div>
         <button class="post-editor-save">Save</button>
     </section>
+</template>
+
+<template name="postEditorCodeMirror">
+    <div class="post-editor-codemirror">
+        <h2>Markdown</h2>
+    </div>
+</template>
+
+<template name="postEditorPreview">
+    <div class="post-editor-preview">
+        <h2>Preview</h2>
+        <div class="post-editor-preview-content">
+            {{#markdown}}
+                {{postDraftRaw}}
+            {{/markdown}}
+        </div>
+    </div>
 </template>

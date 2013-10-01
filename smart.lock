@@ -2,15 +2,9 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "sp-epic-editor": {},
       "iron-router": {}
     },
     "packages": {
-      "sp-epic-editor": {
-        "git": "https://bitbucket.org/parhelium/sp-epic-editor",
-        "tag": "v0.0.3",
-        "commit": "1de330c49a955411d40647bdfdf6a3625c7447e6"
-      },
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
         "tag": "v0.5.4",
