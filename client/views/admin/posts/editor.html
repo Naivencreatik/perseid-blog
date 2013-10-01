@@ -1,6 +1,6 @@
 <template name="postEditor">
+    <h1>Créer un article</h1>
     <section class="post-editor">
-        <h2>New post</h2>
         <div class="post-editor-split">
             {{> postEditorCodeMirror}}
             {{> postEditorPreview}}
@@ -19,7 +19,7 @@
     <div class="post-editor-preview">
         <h2 class="post-editor-title">Preview</h2>
         <div class="post-editor-preview-content">
-            {{#markdown}}{{postDraftRaw}}{{/markdown}}
+            {{#markdown}}{{postDraft}}{{/markdown}}
         </div>
     </div>
 </template>

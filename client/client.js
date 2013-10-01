@@ -39,6 +39,21 @@ Router.map(function(){
             }
         ]
     });
+
+    this.route('adminPostList', {
+        path: '/admin/posts'
+    });
+
+    this.route('postEditor', {
+        path: '/admin/posts/editor/:_id?',
+        data: function () {
+            if (!this.params._id) {
+                return;
+            }
+
+            return Posts.findOne({_id: this.params._id});
+        }
+    });
 });
 
 Router.configure({

@@ -1,0 +1,13 @@
+<template name="adminPostList">
+    <h1>Gestion des articles</h1>
+    <a href="{{pathFor 'postEditor'}}">Ajouter un article</a>
+    <ul>
+        {{#each posts}}
+            {{> adminPost}}
+        {{/each}}
+    </ul>
+</template>
+
+<template name="adminPost">
+    <li>{{content}} <button class="post-edit">Editer</button><button class="post-delete">Supprimer</button></li>
+</template>
