@@ -10,6 +10,6 @@ Template.adminPost.events({
     },
 
     "click .post-edit": function(event, template) {
-        Router.go('postEditor', {_id: this._id});
+        Router.go('adminPostEditor', {_id: this._id});
     }
 });

@@ -1,4 +1,4 @@
-Template.adminSetup.events({
+Template.setup.events({
     'submit': function(event, template){
         event.preventDefault();
         Accounts.createUser({

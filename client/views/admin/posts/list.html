@@ -1,6 +1,6 @@
 <template name="adminPostList">
     <h1>Gestion des articles</h1>
-    <a href="{{pathFor 'postEditor'}}">Ajouter un article</a>
+    <a href="{{pathFor 'adminPostEditor'}}">Ajouter un article</a>
     <ul>
         {{#each posts}}
             {{> adminPost}}
