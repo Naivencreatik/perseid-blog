@@ -21,6 +21,10 @@ Template.postEditorCodeMirror.rendered = function () {
     });
 };
 
+Template.postEditorCodeMirror.destroyed = function () {
+    cm = null;
+};
+
 Template.postEditorPreview.helpers({
     "postDraftRaw": function(){
         return Session.get("postDraftRaw");
