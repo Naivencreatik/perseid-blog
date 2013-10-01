@@ -7,7 +7,7 @@
     height: 400px;
 }
 
-.post-editor-split h2 {
+.post-editor-split .post-editor-title {
     position: absolute;
     top: 0;
     left: 10px;
