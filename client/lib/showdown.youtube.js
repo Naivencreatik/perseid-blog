@@ -16,7 +16,7 @@ var ShowdownYoutubeLink = function(converter) {
         type: 'lang',
         regex: ytRegex,
         replace: function (match, videoId) {
-            return '<a href="http://www.youtube.com/watch?=' + videoId + '" target="_blank">(Video)</a>';
+            return '<a href="http://www.youtube.com/watch?v=' + videoId + '" target="_blank">(Video)</a>';
         }
     }];
 };
