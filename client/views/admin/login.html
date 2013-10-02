@@ -1,11 +1,11 @@
 <template name="adminLogin">
-    <h1>Connection</h1>
+    <h1>{{__ "login.title"}}</h1>
     {{#if error}}
-        <div>Error: {{error}}</div>
+        <div>{{error}}</div>
     {{/if}}
     <form action="#">
-        <input type="text" name="login" required>
-        <input type="password" name="password" required>
-        <button type="submit">Login</button>
+        <input type="text" name="login" required placeholder="{{__ 'user.login'}}">
+        <input type="password" name="password" required placeholder="{{__ 'user.password'}}">
+        <button type="submit">{{__ "login"}}</button>
     </form>
 </template>

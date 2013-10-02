@@ -1,23 +1,23 @@
 <template name="postEditor">
-    <h1>Créer un article</h1>
+    <h1>{{__ "admin.posts.add"}}</h1>
     <section class="post-editor">
         <div class="post-editor-split">
             {{> postEditorCodeMirror}}
             {{> postEditorPreview}}
         </div>
-        <button class="post-editor-save">Save</button>
+        <button class="post-editor-save">{{__ "admin.posts.editor.save"}}</button>
     </section>
 </template>
 
 <template name="postEditorCodeMirror">
     <div class="post-editor-codemirror">
-        <h2 class="post-editor-title">Markdown</h2>
+        <h2 class="post-editor-title">{{__ "admin.posts.editor.markdown"}}</h2>
     </div>
 </template>
 
 <template name="postEditorPreview">
     <div class="post-editor-preview">
-        <h2 class="post-editor-title">Preview</h2>
+        <h2 class="post-editor-title">{{__ "admin.posts.editor.preview"}}</h2>
         <div class="post-editor-preview-content">
             {{#markdown}}{{postDraft}}{{/markdown}}
         </div>

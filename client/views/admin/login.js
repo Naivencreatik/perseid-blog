@@ -7,13 +7,13 @@ Template.adminLogin.events({
             template.find('[name="password"]').value,
             function(err) {
                 if (err) {
-                    Session.set('admin.login.error', null);
+                    Session.set('login.error', null);
 
                     if (err.error === 403) {
-                        Session.set('admin.login.error', 'Unknown user / Bad password');
+                        Session.set('login.error', 'login.error.forbidden');
                     }
                     else {
-                        Session.set('admin.login.error', 'Unknown error');
+                        Session.set('login.error', 'login.error.unknown');
                     }
                 }
 
@@ -24,6 +24,9 @@ Template.adminLogin.events({
 
 Template.adminLogin.helpers({
     error: function(){
-        return Session.get('admin.login.error');
+        var errorKey = Session.get('login.error');
+        if (errorKey) {
+            return i18n.stringFor(errorKey);
+        }
     }
 });

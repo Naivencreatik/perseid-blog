@@ -1,5 +1,8 @@
 {
   "packages": {
-    "iron-router": {}
+    "iron-router": {},
+    "dumb-i18n": {
+        "git": "https://github.com/sylvaingi/meteor-dumb-i18n.git"
+    }
   }
 }

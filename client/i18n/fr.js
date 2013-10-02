@@ -1,0 +1,23 @@
+i18n.addLocale("fr", {
+    "home": "Accueil",
+    "admin": "Administration",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "user.login": "Login",
+    "user.password": "Mot de passe",
+    "setup.title": "Installation du CMS NNC",
+    "setup.user": "Compte administrateur",
+    "setup.user.passwordconfirm": "Confirmer",
+    "setup.user.create": "Créer",
+    "setup.error.passwordmismatch": "Les mots de passe ne correspondent pas.",
+    "login.title": "Connexion administrateur",
+    "login.error.forbidden": "Utilisateur ou mot de passe incorrect.",
+    "login.error.unknown": "Erreur serveur, merci de réessayer.",
+    "admin.posts": "Gérer les articles",
+    "admin.posts.add": "Ajouter un article",
+    "admin.posts.edit": "Editer",
+    "admin.posts.delete": "Supprimer",
+    "admin.posts.editor.markdown": "Markdown",
+    "admin.posts.editor.preview": "Apercu",
+    "admin.posts.editor.save": "Ajouter"
+});

@@ -66,7 +66,7 @@ Router.configure({
                 this.stop();
             }
             else {
-                this.redirect("login");
+                this.redirect("adminLogin");
             }
         }
     }
@@ -74,9 +74,14 @@ Router.configure({
 
 /* First time run redirection */
 Deps.autorun(function(c){
-    var setup = Config.findOne({_id: "setup"});
-    if(setup && !setup.completed){
-        Router.go("setup");
+    if (configSub.ready()){
+        var setup = Config.findOne({_id: "setup"});
+
+        if (!setup.completed) {
+            Router.go("setup");
+        }
+
+        c.stop();
     }
 });
 
