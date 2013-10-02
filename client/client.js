@@ -1,4 +1,4 @@
-var postSub = Meteor.subscribe("posts");
+var postsSub = Meteor.subscribe("posts");
 var configSub = Meteor.subscribe("config");
 
 Router.map(function(){
@@ -13,12 +13,14 @@ Router.map(function(){
     });
 
     this.route("adminPostList", {
-        path: "/admin/posts"
+        path: "/admin/posts",
+        waitOn: postsSub
     });
 
     this.route("adminPostEditor", {
         template: "postEditor",
         path: "/admin/posts/editor/:_id?",
+        waitOn: postsSub,
         data: function () {
             if (!this.params._id) {
                 return;

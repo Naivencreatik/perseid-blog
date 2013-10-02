@@ -30,7 +30,8 @@ Template.postEditor.events({
 Template.postEditorCodeMirror.rendered = function () {
     cm = CodeMirror(this.firstNode, {
       value: Session.get("postDraft") || "",
-      mode:  "markdown"
+      mode: "markdown",
+      lineWrapping: true
     });
 
     cm.focus();
