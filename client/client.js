@@ -79,3 +79,5 @@ Deps.autorun(function(c){
         Router.go("setup");
     }
 });
+
+moment.lang("fr");

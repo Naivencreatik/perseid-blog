@@ -1,11 +1,16 @@
 <template name="posts">
-    <ul>
+    <section class="post-list">
     {{#each posts}}
         {{> post}}
     {{/each}}
-    </ul>
+    </section>
 </template>
 
 <template name="post">
-    <li>{{#markdown}}{{content}}{{/markdown}} - {{date}}</li>
+    <article>
+        <div class="post-content">
+            {{#markdown}}{{content}}{{/markdown}}
+        </div>
+        <div class="post-info">{{ago}}</div>
+    </article>
 </template>

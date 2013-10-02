@@ -38,3 +38,8 @@
 .post-editor-preview-content {
     padding-left: 20px;
 }
+
+.post-info {
+    font-size: 0.8em;
+    font-style: italic;
+}
