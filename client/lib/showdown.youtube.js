@@ -1,4 +1,4 @@
-var ytRegex = '\\^\\^yt\\shttp://www\\.youtube\\.com/watch\\?\\S*v=([^\\s&]+)\\S*';
+var ytRegex = '\\^\\^yt\\s(?:https?://)?www\\.youtube\\.com/watch\\?\\S*v=([^\\s&]+)\\S*';
 
 var ShowdownYoutubeEmbed = function(converter) {
     return [{
