@@ -45,7 +45,7 @@ Template.postEditorCodeMirror.destroyed = function () {
     cm = null;
 };
 
-var converter = new Showdown.converter({ extensions: ['youtube.link']});
+var converter = new Showdown.converter({ extensions: ['youtube.link', 'autolink']});
 
 Template.postEditorPreview.helpers({
     "postPreview": function(){

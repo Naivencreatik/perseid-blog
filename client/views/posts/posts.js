@@ -4,7 +4,7 @@ Template.posts.helpers({
     }
 });
 
-var converter = new Showdown.converter({ extensions: ['youtube.embed']});
+var converter = new Showdown.converter({ extensions: ['youtube.embed', 'autolink']});
 
 Template.post.helpers({
     postContent: function () {
