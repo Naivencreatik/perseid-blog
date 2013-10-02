@@ -4,8 +4,13 @@ Template.posts.helpers({
     }
 });
 
+var converter = new Showdown.converter({ extensions: ['youtube.embed']});
+
 Template.post.helpers({
-    ago: function() {
+    postContent: function () {
+        return new Handlebars.SafeString(converter.makeHtml(this.content));
+    },
+    ago: function () {
         var m = moment(this.date);
         if(m.isBefore(moment().startOf('day'))){
             return m.format("L");

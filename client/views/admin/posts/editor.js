@@ -44,8 +44,11 @@ Template.postEditorCodeMirror.destroyed = function () {
     cm = null;
 };
 
+var converter = new Showdown.converter({ extensions: ['youtube.link']});
+
 Template.postEditorPreview.helpers({
-    "postDraft": function(){
-        return Session.get("postDraft");
+    "postPreview": function(){
+        return new Handlebars.SafeString(converter.makeHtml(Session.get("postDraft")));
     }
 });
+
