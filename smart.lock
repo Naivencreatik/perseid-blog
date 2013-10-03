@@ -6,6 +6,10 @@
       "dumb-i18n": {
         "git": "https://github.com/sylvaingi/meteor-dumb-i18n.git",
         "branch": "master"
+      },
+      "smartfile": {
+        "git": "https://github.com/sylvaingi/meteor-smartfile.git",
+        "branch": "master"
       }
     },
     "packages": {
@@ -18,6 +22,11 @@
         "git": "https://github.com/sylvaingi/meteor-dumb-i18n.git",
         "branch": "master",
         "commit": "513ee9964d7986d9a470c0b257d554c03424aa7a"
+      },
+      "smartfile": {
+        "git": "https://github.com/sylvaingi/meteor-smartfile.git",
+        "branch": "master",
+        "commit": "72a792211a25ada365d9d42f0a635e41768b2bb6"
       }
     }
   }

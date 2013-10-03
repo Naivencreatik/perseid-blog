@@ -1,3 +1,9 @@
+Template.posts.events({
+    "change .upload-test": function (event) {
+        SmartFile.upload(event.target.files[0], "");
+    }
+});
+
 Template.posts.helpers({
     posts: function () {
         return Posts.find({}, {sort: {date: -1}});
