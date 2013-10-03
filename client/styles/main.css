@@ -39,6 +39,10 @@
     padding-left: 20px;
 }
 
+.post-editor-preview-content img {
+    max-width: 100%;
+}
+
 .post-info {
     font-size: 0.8em;
     font-style: italic;
