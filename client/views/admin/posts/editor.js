@@ -79,7 +79,7 @@ Template.postEditorCodeMirror.events({
                 return;
             }
 
-            cm.replaceRange("![" + file.name + "](//" + uploadPath + ")", cm.getCursor());
+            cm.replaceRange("![" + file.name + "](" + uploadPath + ")", cm.getCursor());
         });
     }
 });
