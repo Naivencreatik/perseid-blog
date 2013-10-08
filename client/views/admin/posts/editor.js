@@ -72,14 +72,14 @@ Template.postEditorCodeMirror.events({
             return;
         }
 
-        SmartFile.upload(file, {path: "uploads"}, function(err, uploadPath){
+        SmartFile.upload(file, {path: "uploads"}, function(err, res){
             if (err) {
                 //XXX: proper user feedback ?
                 console.log(err);
                 return;
             }
 
-            cm.replaceRange("![" + file.name + "](" + uploadPath + ")", cm.getCursor());
+            cm.replaceRange("![" + file.name + "](" + res.publicPath + ")", cm.getCursor());
         });
     }
 });
