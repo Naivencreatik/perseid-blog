@@ -26,7 +26,7 @@
       "smartfile": {
         "git": "https://github.com/sylvaingi/meteor-smartfile.git",
         "branch": "master",
-        "commit": "72a792211a25ada365d9d42f0a635e41768b2bb6"
+        "commit": "413d4d04ba6180a630e593b6003cbd258be0b936"
       }
     }
   }

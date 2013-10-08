@@ -72,7 +72,7 @@ Template.postEditorCodeMirror.events({
             return;
         }
 
-        SmartFile.upload(file, "uploads", function(err, uploadPath){
+        SmartFile.upload(file, {path: "uploads"}, function(err, uploadPath){
             if (err) {
                 //XXX: proper user feedback ?
                 console.log(err);
