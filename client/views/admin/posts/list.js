@@ -6,7 +6,7 @@ Template.adminPostList.helpers({
 
 Template.adminPost.events({
     "click .post-delete": function(event, template) {
-        Posts.remove({_id: this._id});
+        Posts.erase(this._id);
     },
 
     "click .post-edit": function(event, template) {
