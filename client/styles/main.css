@@ -1486,11 +1486,6 @@ header {
   background: white;
 }
 
-/* line 10, ../sass/views/admin/_list.scss */
-.admin-post-test {
-  padding: 25px;
-}
-
 /* line 1, ../sass/views/admin/_editor.scss */
 .post-editor-split {
   position: relative;
