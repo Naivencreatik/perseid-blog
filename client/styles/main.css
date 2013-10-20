@@ -1321,7 +1321,6 @@ input[type="email"] {
   margin: 5px 0;
   padding: 0 5px;
   font-size: 12px;
-  line-height: 40px;
   color: black;
   background: white;
   border: 1px solid #aeaeae;
@@ -1336,7 +1335,7 @@ input[type="email"] {
   -webkit-appearance: none;
 }
 
-/* line 18, ../sass/units/_forms.scss */
+/* line 17, ../sass/units/_forms.scss */
 textarea {
   width: 400px;
   height: 140px;
@@ -1354,7 +1353,7 @@ textarea {
   -webkit-appearance: none;
 }
 
-/* line 36, ../sass/units/_forms.scss */
+/* line 35, ../sass/units/_forms.scss */
 input[type="submit"],
 button[type="submit"] {
   display: inline-block;
@@ -1366,7 +1365,7 @@ button[type="submit"] {
   background: transparent;
   -webkit-appearance: none;
 }
-/* line 46, ../sass/units/_forms.scss */
+/* line 45, ../sass/units/_forms.scss */
 input[type="submit"]:hover,
 button[type="submit"]:hover {
   color: black;
@@ -1485,19 +1484,24 @@ header {
   background: #cb432c;
 }
 
-/* line 5, ../sass/views/admin/_list.scss */
+/* line 1, ../sass/views/admin/_list.scss */
+.admin-post-list {
+  width: 50%;
+}
+
+/* line 6, ../sass/views/admin/_list.scss */
 .admin-post {
   height: 80px;
   margin-bottom: 15px;
   background: white;
 }
-/* line 10, ../sass/views/admin/_list.scss */
+/* line 11, ../sass/views/admin/_list.scss */
 .admin-post .admin-post-actions {
   float: right;
   margin-right: 15px;
   line-height: 80px;
 }
-/* line 16, ../sass/views/admin/_list.scss */
+/* line 17, ../sass/views/admin/_list.scss */
 .admin-post button {
   color: white;
   background: #cb432c;
@@ -1507,10 +1511,14 @@ header {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-
 /* line 23, ../sass/views/admin/_list.scss */
-.admin-post-test {
-  padding: 25px;
+.admin-post p {
+  display: block;
+  float: left;
+  margin-left: 40px;
+  font-size: 25px;
+  color: #aeaeae;
+  line-height: 80px;
 }
 
 /* line 1, ../sass/views/admin/_editor.scss */

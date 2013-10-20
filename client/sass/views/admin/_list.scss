@@ -1,4 +1,5 @@
 .admin-post-list {
+	width: 50%;
 
 }
 
@@ -18,9 +19,15 @@
 		background: $color5;
 		@include border-radius(3px);
 	}
+
+	p {
+		display:block;
+		float: left;
+		margin-left: 40px;
+		font-size: 25px;
+		color: $color4;
+		line-height: 80px;
+	}
 }
 
-.admin-post-test{
-	padding:25px;
-}
 
