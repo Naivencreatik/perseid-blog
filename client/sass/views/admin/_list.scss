@@ -1,12 +1,25 @@
 .admin-post-list {
-	padding: 15px;
+
 }
 
 .admin-post {
 	height: 80px;
 	margin-bottom: 15px;
 	background: $color1;
+
+	.admin-post-actions {
+		float: right;
+		margin-right: 15px;
+		line-height: 80px;
+	}
+
+	button {
+		color: $color1;
+		background: $color5;
+		@include border-radius(3px);
+	}
 }
+
 .admin-post-test{
 	padding:25px;
 }

@@ -7,6 +7,7 @@
 @import "units/mixins";
 @import "units/fonts";
 @import "units/forms";
+@import "units/buttons";
 
 @import "views/header";
 
@@ -37,6 +38,10 @@ a {
 
 .right {
 	float: right;
+}
+
+.main {
+	padding: 15px;
 }
 
 ::-webkit-scrollbar {

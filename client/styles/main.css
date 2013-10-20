@@ -1373,6 +1373,17 @@ button[type="submit"]:hover {
   cursor: pointer;
 }
 
+/* line 1, ../sass/units/_buttons.scss */
+button {
+  padding: 5px 15px;
+  border: none;
+  background: none;
+}
+/* line 6, ../sass/units/_buttons.scss */
+button:hover {
+  cursor: pointer;
+}
+
 /* line 1, ../sass/views/_header.scss */
 header {
   position: absolute;
@@ -1474,19 +1485,30 @@ header {
   background: #cb432c;
 }
 
-/* line 1, ../sass/views/admin/_list.scss */
-.admin-post-list {
-  padding: 15px;
-}
-
 /* line 5, ../sass/views/admin/_list.scss */
 .admin-post {
   height: 80px;
   margin-bottom: 15px;
   background: white;
 }
-
 /* line 10, ../sass/views/admin/_list.scss */
+.admin-post .admin-post-actions {
+  float: right;
+  margin-right: 15px;
+  line-height: 80px;
+}
+/* line 16, ../sass/views/admin/_list.scss */
+.admin-post button {
+  color: white;
+  background: #cb432c;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 23, ../sass/views/admin/_list.scss */
 .admin-post-test {
   padding: 25px;
 }
@@ -1538,7 +1560,7 @@ header {
   max-width: 100%;
 }
 
-/* line 19, ../sass/main.scss */
+/* line 20, ../sass/main.scss */
 *,
 *:before,
 *:after {
@@ -1547,7 +1569,7 @@ header {
   box-sizing: border-box;
 }
 
-/* line 23, ../sass/main.scss */
+/* line 24, ../sass/main.scss */
 html, body {
   height: 100%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1555,22 +1577,27 @@ html, body {
   background: #f1f1f1;
 }
 
-/* line 30, ../sass/main.scss */
+/* line 31, ../sass/main.scss */
 body {
   padding-top: 130px;
 }
 
-/* line 34, ../sass/main.scss */
+/* line 35, ../sass/main.scss */
 a {
   text-decoration: none;
 }
 
-/* line 38, ../sass/main.scss */
+/* line 39, ../sass/main.scss */
 .right {
   float: right;
 }
 
-/* line 42, ../sass/main.scss */
+/* line 43, ../sass/main.scss */
+.main {
+  padding: 15px;
+}
+
+/* line 47, ../sass/main.scss */
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 12px;
@@ -1578,13 +1605,13 @@ a {
   background: transparent;
 }
 
-/* line 49, ../sass/main.scss */
+/* line 54, ../sass/main.scss */
 ::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.2);
   opacity: 0;
 }
 
-/* line 54, ../sass/main.scss */
+/* line 59, ../sass/main.scss */
 ::-webkit-scrollbar-thumb {
   margin: 10px;
   background: black;

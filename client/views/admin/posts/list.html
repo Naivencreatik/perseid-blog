@@ -1,16 +1,20 @@
 <template name="adminPostList">
-    <h1>{{__ "admin.posts"}}</h1>
-    <!-- <a href="{{pathFor 'adminPostEditor'}}">{{__ "admin.posts.add"}}</a> -->
-    <ul class="admin-post-list">
-        {{#each posts}}
-            {{> adminPost}}
-        {{/each}}
-    </ul>
+    <section class="main">
+        <h1>{{__ "admin.posts"}}</h1>
+        <!-- <a href="{{pathFor 'adminPostEditor'}}">{{__ "admin.posts.add"}}</a> -->
+        <ul class="admin-post-list">
+            {{#each posts}}
+                {{> adminPost}}
+            {{/each}}
+        </ul>
+    </section>
 </template>
 
 <template name="adminPost">
     <li class="admin-post">{{firstLine}}
-        <button class="post-edit">{{__ "admin.posts.edit"}}</button>
-        <button class="post-delete">{{__ "admin.posts.delete"}}</button>
+        <div class="admin-post-actions">
+            <button class="post-edit">{{__ "admin.posts.edit"}}</button>
+            <button class="post-delete">{{__ "admin.posts.delete"}}</button>
+        </div>
     </li>
 </template>
