@@ -5,9 +5,53 @@
 @import "libs/libs";
 
 @import "units/mixins";
+@import "units/fonts";
+@import "units/forms";
 
+@import "views/header";
+
+@import "views/admin/login";
 @import "views/admin/editor";
 
-* {
+*,
+*:before,
+*:after {
     @include box-sizing(border-box);
+}
+
+html, body {
+	height: 100%;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  	font-size: 14px;
+	background: $color3;
+}
+
+body {
+	padding-top: 130px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.right {
+	float: right;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    background: transparent;
+}
+    
+::-webkit-scrollbar-track {
+    background: transparentize($color2, 0.8);
+    opacity: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    margin: 10px;
+    //border: 3px solid $black;
+    background: $color2;
 }

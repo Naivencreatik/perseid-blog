@@ -10,7 +10,7 @@ i18n.addLocale("fr", {
     "setup.user.passwordconfirm": "Confirmer",
     "setup.user.create": "Créer",
     "setup.error.passwordmismatch": "Les mots de passe ne correspondent pas.",
-    "login.title": "Connexion administrateur",
+    "login.title": "Connexion admin",
     "login.error.forbidden": "Utilisateur ou mot de passe incorrect.",
     "login.error.unknown": "Erreur serveur, merci de réessayer.",
     "admin.posts": "Gérer les articles",

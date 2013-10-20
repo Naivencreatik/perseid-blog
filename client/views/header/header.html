@@ -1,9 +1,33 @@
 <template name="header">
     <header>
-        <a href="{{pathFor 'home'}}">{{__ "home"}}</a>
-        {{#if currentUser}}
-            <a href="{{pathFor 'admin'}}">{{__ "admin"}}</a>
-            <a href="#" class="header-logout">{{__ "logout"}}</a>
-        {{/if}}
+    	<nav class="nav-header">
+    		<ul>
+    			<li class="nav-item">
+    				<a href="{{pathFor 'home'}}">{{__ "home"}}</a>
+    			</li>
+        		
+	        {{#if currentUser}}
+	            <li class="nav-item">
+	            	<a href="{{pathFor 'admin'}}">{{__ "admin"}}</a>
+	            </li>
+	            <li class="nav-item right">
+	            	<a href="#" class="header-logout">{{__ "logout"}}</a>
+	            </li>
+	        {{/if}}
+
+    		</ul>
+    	</nav>
+
+		<nav class="sub-nav-header">
+            <ul>
+                <li>
+                    <a href="{{pathFor 'adminPostEditor'}}">{{__ "admin.posts.add"}}</a>
+                </li>
+                <li>
+                    <a href="{{pathFor 'adminPostList'}}">{{__ "admin.posts"}}</a>
+                </li>
+            </ul>      
+        </nav>
+
     </header>
 </template>

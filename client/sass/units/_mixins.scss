@@ -1,0 +1,21 @@
+$color1: white;
+$color2: black;
+
+$color3: #f1f1f1;
+$color4: #aeaeae;
+$color5: #cb432c;
+
+@mixin clearfix {
+    *zoom: 1;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
