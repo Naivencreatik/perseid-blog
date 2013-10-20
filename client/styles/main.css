@@ -1409,24 +1409,24 @@ header {
   opacity: 1;
 }
 
-/* line 35, ../sass/views/_header.scss */
+/* line 34, ../sass/views/_header.scss */
 .sub-nav-header {
   margin: 10px 15px 0 15px;
   padding: 0 10px;
   background: white;
 }
-/* line 40, ../sass/views/_header.scss */
+/* line 39, ../sass/views/_header.scss */
 .sub-nav-header li {
   display: inline-block;
   padding: 0 10px;
   line-height: 55px;
 }
-/* line 45, ../sass/views/_header.scss */
+/* line 44, ../sass/views/_header.scss */
 .sub-nav-header li a {
   color: black;
   opacity: 0.5;
 }
-/* line 49, ../sass/views/_header.scss */
+/* line 48, ../sass/views/_header.scss */
 .sub-nav-header li a:hover {
   opacity: 1;
 }
@@ -1472,6 +1472,18 @@ header {
   width: 280px;
   height: 40px;
   background: #cb432c;
+}
+
+/* line 1, ../sass/views/admin/_list.scss */
+.admin-post-list {
+  padding: 15px;
+}
+
+/* line 5, ../sass/views/admin/_list.scss */
+.admin-post {
+  height: 80px;
+  margin-bottom: 15px;
+  background: white;
 }
 
 /* line 1, ../sass/views/admin/_editor.scss */
@@ -1521,7 +1533,7 @@ header {
   max-width: 100%;
 }
 
-/* line 18, ../sass/main.scss */
+/* line 19, ../sass/main.scss */
 *,
 *:before,
 *:after {
@@ -1530,7 +1542,7 @@ header {
   box-sizing: border-box;
 }
 
-/* line 22, ../sass/main.scss */
+/* line 23, ../sass/main.scss */
 html, body {
   height: 100%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1538,22 +1550,22 @@ html, body {
   background: #f1f1f1;
 }
 
-/* line 29, ../sass/main.scss */
+/* line 30, ../sass/main.scss */
 body {
   padding-top: 130px;
 }
 
-/* line 33, ../sass/main.scss */
+/* line 34, ../sass/main.scss */
 a {
   text-decoration: none;
 }
 
-/* line 37, ../sass/main.scss */
+/* line 38, ../sass/main.scss */
 .right {
   float: right;
 }
 
-/* line 41, ../sass/main.scss */
+/* line 42, ../sass/main.scss */
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 12px;
@@ -1561,13 +1573,13 @@ a {
   background: transparent;
 }
 
-/* line 48, ../sass/main.scss */
+/* line 49, ../sass/main.scss */
 ::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.2);
   opacity: 0;
 }
 
-/* line 53, ../sass/main.scss */
+/* line 54, ../sass/main.scss */
 ::-webkit-scrollbar-thumb {
   margin: 10px;
   background: black;

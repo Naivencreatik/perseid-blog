@@ -1,7 +1,7 @@
 <template name="adminPostList">
     <h1>{{__ "admin.posts"}}</h1>
     <!-- <a href="{{pathFor 'adminPostEditor'}}">{{__ "admin.posts.add"}}</a> -->
-    <ul>
+    <ul class="admin-post-list">
         {{#each posts}}
             {{> adminPost}}
         {{/each}}
@@ -9,7 +9,7 @@
 </template>
 
 <template name="adminPost">
-    <li>{{firstLine}}
+    <li class="admin-post">{{firstLine}}
         <button class="post-edit">{{__ "admin.posts.edit"}}</button>
         <button class="post-delete">{{__ "admin.posts.delete"}}</button>
     </li>
