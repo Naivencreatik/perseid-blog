@@ -79,7 +79,8 @@ Template.postEditorCodeMirror.events({
                 return;
             }
 
-            cm.replaceRange("![" + file.name + "](" + res.publicPath + ")", cm.getCursor());
+            var publicPath = SmartFile.resolvePublic(res.path);
+            cm.replaceRange("![" + file.name + "](" + publicPath + ")", cm.getCursor());
         });
     }
 });
