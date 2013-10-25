@@ -4,7 +4,7 @@ Meteor.startup(function () {
         Posts.insert({content: "#second-post", date: new Date()});
     }
 
-    if (Config.find({_id: 'setup'}).count() === 0){
+    if (!Config.findOne({_id: 'setup'})){
         Config.insert({_id: 'setup', completed: false});
     }
 });

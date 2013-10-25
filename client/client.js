@@ -34,13 +34,9 @@ Router.map(function(){
         waitOn: configSub,
         before: function () {
             //Ensure the setup screen can't be displayed once the setup process is completed
-            if (configSub.ready() && Config.findOne({_id: "setup"}).completed){
+            if (this.ready() && Config.findOne({_id: "setup"}).completed){
                 console.log("App has already been configured, redirecting to admin home");
                 this.redirect("admin");
-            }
-            else {
-                this.render(this.loadingTemplate);
-                this.stop();
             }
         }
     });
@@ -48,28 +44,28 @@ Router.map(function(){
 });
 
 Router.configure({
-    layout: "layout",
+    layoutTemplate: "layout",
 
-    renderTemplates: {
+    yieldTemplates: {
         "header": { to: "header" }
-    },
+    }
+});
 
-    before: function () {
-        var routeName = this.context.route.name;
+Router.before(function () {
+    var routeName = this.route.name;
 
-        // no need to check at these URLs
-        if (routeName === "adminLogin" || routeName.indexOf("admin") !== 0)
-            return;
+    // no need to check at these URLs
+    if (routeName === "adminLogin" || routeName.indexOf("admin") !== 0)
+        return;
 
-        var user = Meteor.user();
-        if (!user) {
-            if(Meteor.loggingIn()) {
-                this.render(this.loadingTemplate);
-                this.stop();
-            }
-            else {
-                this.redirect("adminLogin");
-            }
+    var user = Meteor.user();
+    if (!user) {
+        if(Meteor.loggingIn()) {
+            this.render(this.loadingTemplate);
+            this.stop();
+        }
+        else {
+            this.redirect("adminLogin");
         }
     }
 });

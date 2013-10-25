@@ -4,8 +4,6 @@
     "dumb-i18n": {
         "git": "https://github.com/sylvaingi/meteor-dumb-i18n.git"
     },
-    "smartfile": {
-        "git": "https://github.com/sylvaingi/meteor-smartfile.git"
-    }
+    "smartfile": {}
   }
 }

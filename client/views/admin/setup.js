@@ -10,7 +10,7 @@ Template.setup.events({
             return;
         }
 
-        Accounts.createUser({
+        Config.initialSetup({
             username: template.find('[name="login"]').value,
             password: template.find('[name="password"]').value,
         }, function(err){
@@ -18,7 +18,6 @@ Template.setup.events({
                 console.log(err);
                 return;
             }
-            Config.completeSetup();
             Router.go('admin');
         });
     }
