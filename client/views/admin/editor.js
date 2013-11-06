@@ -17,10 +17,10 @@ Template.postEditor.events({
         var postContent = Session.get("postDraft");
 
         if (this._id) {
-            Perseid.colls.posts.edit(this._id, postContent);
+            Meteor.call("post.edit", id, content);
         }
         else {
-            Perseid.colls.posts.save(postContent);
+            Meteor.call("post.save", content);
         }
 
         Router.go("adminPostList");

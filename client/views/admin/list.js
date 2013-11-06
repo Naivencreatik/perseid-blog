@@ -6,7 +6,7 @@ Template.adminPostList.helpers({
 
 Template.adminPost.events({
     "click .post-delete": function(event, template) {
-        Perseid.colls.posts.erase(this._id);
+        Meteor.call("post.delete", id);
     },
 
     "click .post-edit": function(event, template) {

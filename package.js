@@ -18,8 +18,6 @@ Package.on_use(function (api) {
   api.add_files([
     'client/blog.js',
     
-    'client/collections/posts.js',
-
     'client/i18n/fr.js',
 
     'client/vendor/showdown.js',
