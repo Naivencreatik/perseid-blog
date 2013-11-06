@@ -33,6 +33,7 @@ Package.on_use(function (api) {
 
     'client/views/admin/editor.html',
     'client/views/admin/editor.js',
+    'client/views/admin/header.html',
     'client/views/admin/list.html',
     'client/views/admin/list.js',
 

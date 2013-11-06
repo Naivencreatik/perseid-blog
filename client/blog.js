@@ -24,5 +24,10 @@ Router.map(function(){
     });
 });
 
+Router.after(function(){
+    if (Meteor.userId()) {
+        this.render("adminPostItems", {to: "adminActions"})
+    }
+});
 
 moment.lang("fr");
