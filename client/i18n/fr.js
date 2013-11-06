@@ -1,4 +1,4 @@
-i18n.addLocale("fr", {
+i18n.map("fr", {
     "admin.posts": "Gérer les articles",
     "admin.posts.add": "Ajouter un article",
     "admin.posts.edit": "Editer",
