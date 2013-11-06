@@ -2,7 +2,7 @@ Perseid.subs.posts = Meteor.subscribe("posts");
 
 function yieldAdminItems() {
     if (Meteor.userId()) {
-        this.render("adminPostItems", {to: "adminActions"})
+        this.render("adminPostActions", {to: "adminActions"})
     }
 }
 
