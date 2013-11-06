@@ -1,8 +1,8 @@
 {
   "name": "perseid-blog",
   "description": "Meteor modular CMS - Blog component",
-  "homepage": "none",
+  "homepage": "https://github.com/Naivencreatik/perseid-blog",
   "author": "Sylvain Gizard  (sylvain.gizard@gmail.com)",
   "version": "0.1.0",
-  "git": "none"
+  "git": "https://github.com/Naivencreatik/perseid-blog.git"
 }
