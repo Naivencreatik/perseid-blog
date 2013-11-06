@@ -1,4 +1,4 @@
-Template.posts.helpers({
+Template.postList.helpers({
     posts: function () {
         return Perseid.colls.posts.find({}, {sort: {date: -1}});
     }

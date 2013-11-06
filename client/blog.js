@@ -1,8 +1,9 @@
 Perseid.subs.posts = Meteor.subscribe("posts");
 
 Router.map(function(){
-    this.route("posts", {
-        waitOn: Perseid.subs.posts
+    this.route("postList", {
+        path: "/posts",
+        waitOn: Perseid.subs.posts,
     });
 
     this.route("adminPostList", {
