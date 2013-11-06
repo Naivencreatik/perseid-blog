@@ -1,11 +1,11 @@
-Posts.save = function (content) {
+Perseid.colls.posts.save = function (content) {
     Meteor.call("savePost", content);
 };
 
-Posts.edit = function (id, content) {
+Perseid.colls.posts.edit = function (id, content) {
     Meteor.call("editPost", id, content);
 };
 
-Posts.erase = function(id) {
+Perseid.colls.posts.erase = function(id) {
     Meteor.call("erasePost", id);
 };

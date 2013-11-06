@@ -1,9 +1,8 @@
 {
-  "packages": {
-    "iron-router": {},
-    "dumb-i18n": {
-        "git": "https://github.com/sylvaingi/meteor-dumb-i18n.git"
-    },
-    "smartfile": {}
-  }
+  "name": "perseid-blog",
+  "description": "Meteor modular CMS - Blog component",
+  "homepage": "none",
+  "author": "Sylvain Gizard  (sylvain.gizard@gmail.com)",
+  "version": "0.1.0",
+  "git": "none"
 }

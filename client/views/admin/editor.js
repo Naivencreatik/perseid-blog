@@ -17,10 +17,10 @@ Template.postEditor.events({
         var postContent = Session.get("postDraft");
 
         if (this._id) {
-            Posts.edit(this._id, postContent);
+            Perseid.colls.posts.edit(this._id, postContent);
         }
         else {
-            Posts.save(postContent);
+            Perseid.colls.posts.save(postContent);
         }
 
         Router.go("adminPostList");

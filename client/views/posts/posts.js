@@ -1,6 +1,6 @@
 Template.posts.helpers({
     posts: function () {
-        return Posts.find({}, {sort: {date: -1}});
+        return Perseid.colls.posts.find({}, {sort: {date: -1}});
     }
 });
 

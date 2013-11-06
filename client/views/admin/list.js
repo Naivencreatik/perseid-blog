@@ -1,12 +1,12 @@
 Template.adminPostList.helpers({
     "posts": function() {
-        return Posts.find({}, {sort: {date: -1}});
+        return Perseid.colls.posts.find({}, {sort: {date: -1}});
     }
 });
 
 Template.adminPost.events({
     "click .post-delete": function(event, template) {
-        Posts.erase(this._id);
+        Perseid.colls.posts.erase(this._id);
     },
 
     "click .post-edit": function(event, template) {
