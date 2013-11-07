@@ -13,10 +13,3 @@ Template.adminPost.events({
         Router.go('adminPostEditor', {_id: this._id});
     }
 });
-
-Template.adminPost.helpers({
-    "firstLine": function () {
-        var lines = this.content.split("\n");
-        return lines[0];
-    }
-});

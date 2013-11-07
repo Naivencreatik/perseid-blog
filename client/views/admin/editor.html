@@ -1,12 +1,29 @@
 <template name="postEditor">
     <h1>{{i18n "admin.posts.add"}}</h1>    
     <div class="row post-editor">
+        {{> postEditorError}}
+        {{> postEditorTitle}}
         {{> postEditorCodeMirror}}
         {{> postEditorPreview}}
     </div>
     <button class="btn btn-success post-editor-save">
         <span class="glyphicon glyphicon-floppy-save"></span> {{i18n "admin.posts.editor.save"}}
     </button>
+</template>
+
+<template name="postEditorError">
+    {{#if error}}
+        <div class="alert alert-danger">{{i18n error}}</div>
+    {{/if}}
+</template>
+
+<template name="postEditorTitle">
+    <form role="form">
+    <div class="form-group">
+        <label for="post-editor-title"><h2><small>{{i18n "admin.posts.editor.title"}}</small></h2></label>
+        <input type="text" class="form-control" id="post-editor-title" 
+            required placeholder="{{i18n "admin.posts.editor.title.hint"}}" value="{{title}}">
+    </div>
 </template>
 
 <template name="postEditorCodeMirror">

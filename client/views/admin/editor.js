@@ -3,33 +3,47 @@ var cm;
 
 Template.postEditor.created = function () {
     //Edit mode
-    if (this.data._id) {
+    if (!this.data._id) {
         Session.set("postDraft", this.data.content);
     }
-    //Add mdode
+    //Add mode
     else {
-        Session.set("postDraft", "");
+        Session.set("postDraft", i18n("admin.posts.editor.hint"));
     }
 };
 
 Template.postEditor.events({
-    "click .post-editor-save": function (event, template){
+    "click .post-editor-save": function (event, template) {
+        var postTitle = template.find("#post-editor-title").value;
         var postDraft = Session.get("postDraft");
 
-        if (this._id) {
-            Meteor.call("post.edit", this._id, postDraft);
-        }
-        else {
-            Meteor.call("post.save", postDraft);
+        var checkErr = function (err) {
+            if (err) {
+                Session.set("posts.editor.error", "admin.posts.editor.error")
+            }
+            else {
+                Session.set("posts.editor.error", null)
+                Router.go("adminPostList");
+            }
         }
 
-        Router.go("adminPostList");
+        if (postTitle === "" || postDraft === "") {
+            checkErr(true);
+        }
+
+        var newPost = {title: postTitle, content: postDraft};
+        if (this._id) {
+            Meteor.call("post.edit", this._id, newPost, checkErr);
+        }
+        else {
+            Meteor.call("post.save", newPost, checkErr);
+        }
     }
 });
 
 Template.postEditorCodeMirror.rendered = function () {
     cm = CodeMirror(this.firstNode, {
-      value: Session.get("postDraft") || "",
+      value: Session.get("postDraft"),
       mode: "markdown",
       lineWrapping: true
     });
@@ -88,8 +102,13 @@ Template.postEditorCodeMirror.events({
 var converter = new Showdown.converter({ extensions: ['youtube.link', 'autolink']});
 
 Template.postEditorPreview.helpers({
-    "postPreview": function(){
+    "postPreview": function () {
         return new Handlebars.SafeString(converter.makeHtml(Session.get("postDraft")));
     }
 });
 
+Template.postEditorError.helpers({
+    "error": function () {
+        return Session.get("posts.editor.error");
+    }
+})

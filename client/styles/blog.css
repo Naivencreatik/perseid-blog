@@ -23,7 +23,12 @@
 }
 
 .post-editor-codemirror, .post-editor-preview {
-    height: 500px;
+    height: 440px;
+    padding: 0;
+}
+
+.post-editor-preview {
+    padding-left: 15px;
 }
 
 .post-editor-codemirror {
@@ -31,11 +36,11 @@
 }
 
 .post-editor-codemirror .CodeMirror {
-    height: 460px;
+    height: 400px;
 }
 
 .post-editor-preview-content {
-    height: 460px;
+    height: 400px;
     overflow-y: auto;
 }
 
