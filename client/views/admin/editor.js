@@ -3,7 +3,7 @@ var cm;
 
 Template.postEditor.created = function () {
     //Edit mode
-    if (!this.data._id) {
+    if (this.data._id) {
         Session.set("postDraft", this.data.content);
     }
     //Add mode
@@ -48,8 +48,6 @@ Template.postEditorCodeMirror.rendered = function () {
       lineWrapping: true
     });
 
-    cm.focus();
-
     cm.on("change", function(){
         Session.set("postDraft", cm.getValue());
     });
@@ -86,14 +84,14 @@ Template.postEditorCodeMirror.events({
             return;
         }
 
-        SmartFile.upload(file, {path: "uploads"}, function(err, res){
+        Blog.smartfile.upload(file, {path: "uploads"}, function(err, path){
             if (err) {
                 //XXX: proper user feedback ?
                 console.log(err);
                 return;
             }
 
-            var publicPath = SmartFile.resolvePublic(res.path);
+            var publicPath = Blog.smartfile.resolvePublic(path);
             cm.replaceRange("![" + file.name + "](" + publicPath + ")", cm.getCursor());
         });
     }

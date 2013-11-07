@@ -8,11 +8,12 @@ Package.on_use(function (api) {
   ], ['client', 'server']);
 
   api.add_files([
+    'lib/blog.js',
     'collections/posts.js'
   ], ['client', 'server']);
 
   api.add_files([
-    'server/publications.js'
+    'server/server.js'
   ], 'server');
 
   api.add_files([

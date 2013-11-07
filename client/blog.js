@@ -1,7 +1,7 @@
-Perseid.subs.posts = Meteor.subscribe("posts");
+Blog.subs.posts = Meteor.subscribe("posts");
 
 var PostController = RouteController.extend({
-    waitOn: Perseid.subs.posts,
+    waitOn: Blog.subs.posts,
     adminActionsTemplate: "adminPostActions"
 });
 
@@ -25,7 +25,7 @@ Router.map(function(){
                 return;
             }
 
-            return Perseid.colls.posts.findOne({_id: this.params._id});
+            return Blog.colls.posts.findOne({_id: this.params._id});
         }
     });
 });

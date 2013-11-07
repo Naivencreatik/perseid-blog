@@ -1,6 +1,6 @@
 Template.adminPostList.helpers({
     "posts": function() {
-        return Perseid.colls.posts.find({}, {sort: {date: -1}});
+        return Blog.colls.posts.find({}, {sort: {date: -1}});
     }
 });
 

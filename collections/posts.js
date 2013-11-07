@@ -1,4 +1,4 @@
-Perseid.colls.posts = new Meteor.Collection('posts');
+Blog.colls.posts = new Meteor.Collection('posts');
 
 Meteor.methods({
     "post.save": function (post) {
@@ -6,7 +6,7 @@ Meteor.methods({
         check(post.content, Perseid.match.NonEmptyString);
         check(post.title, Perseid.match.NonEmptyString);
 
-        Perseid.colls.posts.insert({content: post.content, title: post.title, date: new Date()});
+        Blog.colls.posts.insert({content: post.content, title: post.title, date: new Date()});
     },
 
     "post.edit": function(id, post) {
@@ -14,12 +14,12 @@ Meteor.methods({
         check(post.content, Perseid.match.NonEmptyString);
         check(post.title, Perseid.match.NonEmptyString);
 
-        Perseid.colls.posts.update({_id: id}, {$set: {content: post.content, title: post.title}});
+        Blog.colls.posts.update({_id: id}, {$set: {content: post.content, title: post.title}});
     },
 
     "post.delete": function(id){
         Perseid.checkUserId(this.userId);
 
-        Perseid.colls.posts.remove({_id: id});
+        Blog.colls.posts.remove({_id: id});
     }
 });
