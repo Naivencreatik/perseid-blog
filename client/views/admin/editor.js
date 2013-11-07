@@ -103,7 +103,7 @@ var converter = new Showdown.converter({ extensions: ['youtube.link', 'autolink'
 
 Template.postEditorPreview.helpers({
     "postPreview": function () {
-        return new Handlebars.SafeString(converter.makeHtml(Session.get("postDraft")));
+        return new Handlebars.SafeString(converter.makeHtml(Session.get("postDraft")|| ""));
     }
 });
 
