@@ -44,8 +44,16 @@
     overflow-y: auto;
 }
 
+.post-editor-preview-content img {
+    max-width: 100%;
+}
+
 .post {
     padding-bottom: 15px;
     margin-bottom: 15px;
     border-bottom: 1px solid #ddd;
+}
+
+.post img {
+    max-width: 100%;
 }
