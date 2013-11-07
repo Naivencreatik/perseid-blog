@@ -6,7 +6,7 @@ Template.adminPostList.helpers({
 
 Template.adminPost.events({
     "click .post-delete": function(event, template) {
-        Meteor.call("post.delete", id);
+        Meteor.call("post.delete", this._id);
     },
 
     "click .post-edit": function(event, template) {

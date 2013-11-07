@@ -20,6 +20,8 @@ Package.on_use(function (api) {
     
     'client/i18n/fr.js',
 
+    'client/styles/blog.css',
+
     'client/vendor/showdown.js',
     'client/vendor/showdown.link.js',
     'client/vendor/showdown.youtube.js',

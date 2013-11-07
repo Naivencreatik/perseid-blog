@@ -1,0 +1,18 @@
+.admin-post-list {
+    list-style: none;
+}
+
+.admin-post {
+    position: relative;
+    padding-right: 250px;
+}
+
+.admin-post h3 {
+    margin: 0;
+}
+
+.admin-post-actions {
+    position: absolute;
+    right: 19px;
+    top: 15px;
+}

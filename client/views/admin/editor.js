@@ -14,13 +14,13 @@ Template.postEditor.created = function () {
 
 Template.postEditor.events({
     "click .post-editor-save": function (event, template){
-        var postContent = Session.get("postDraft");
+        var postDraft = Session.get("postDraft");
 
         if (this._id) {
-            Meteor.call("post.edit", id, content);
+            Meteor.call("post.edit", id, postDraft);
         }
         else {
-            Meteor.call("post.save", content);
+            Meteor.call("post.save", postDraft);
         }
 
         Router.go("adminPostList");
