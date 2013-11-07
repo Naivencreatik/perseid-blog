@@ -16,3 +16,31 @@
     right: 19px;
     top: 15px;
 }
+
+.post-editor h2 {
+    margin: 0;
+    height: 40px;
+}
+
+.post-editor-codemirror, .post-editor-preview {
+    height: 500px;
+}
+
+.post-editor-codemirror {
+    border-right: 1px solid #ddd;
+}
+
+.post-editor-codemirror .CodeMirror {
+    height: 460px;
+}
+
+.post-editor-preview-content {
+    height: 460px;
+    overflow-y: auto;
+}
+
+.post {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}

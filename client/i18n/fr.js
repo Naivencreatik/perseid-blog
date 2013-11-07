@@ -5,5 +5,5 @@ i18n.map("fr", {
     "admin.posts.delete": "Supprimer",
     "admin.posts.editor.markdown": "Markdown",
     "admin.posts.editor.preview": "Apercu",
-    "admin.posts.editor.save": "Ajouter"
+    "admin.posts.editor.save": "Enregistrer"
 });

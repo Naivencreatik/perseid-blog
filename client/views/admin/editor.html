@@ -1,23 +1,23 @@
 <template name="postEditor">
-    <h1>{{i18n "admin.posts.add"}}</h1>
-    <section class="post-editor">
-        <div class="post-editor-split">
-            {{> postEditorCodeMirror}}
-            {{> postEditorPreview}}
-        </div>
-        <button class="post-editor-save">{{i18n "admin.posts.editor.save"}}</button>
-    </section>
+    <h1>{{i18n "admin.posts.add"}}</h1>    
+    <div class="row post-editor">
+        {{> postEditorCodeMirror}}
+        {{> postEditorPreview}}
+    </div>
+    <button class="btn btn-success post-editor-save">
+        <span class="glyphicon glyphicon-floppy-save"></span> {{i18n "admin.posts.editor.save"}}
+    </button>
 </template>
 
 <template name="postEditorCodeMirror">
-    <div class="post-editor-codemirror">
-        <h2 class="post-editor-title">{{i18n "admin.posts.editor.markdown"}}</h2>
+    <div class="col-md-6 post-editor-codemirror">
+        <h2><small>{{i18n "admin.posts.editor.markdown"}}</small></h2>
     </div>
 </template>
 
 <template name="postEditorPreview">
-    <div class="post-editor-preview">
-        <h2 class="post-editor-title">{{i18n "admin.posts.editor.preview"}}</h2>
+    <div class="col-md-6 post-editor-preview">
+        <h2><small>{{i18n "admin.posts.editor.preview"}}</small></h2>
         <div class="post-editor-preview-content">
             {{postPreview}}
         </div>

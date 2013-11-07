@@ -17,7 +17,7 @@ Template.postEditor.events({
         var postDraft = Session.get("postDraft");
 
         if (this._id) {
-            Meteor.call("post.edit", id, postDraft);
+            Meteor.call("post.edit", this._id, postDraft);
         }
         else {
             Meteor.call("post.save", postDraft);
