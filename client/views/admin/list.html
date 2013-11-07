@@ -1,7 +1,6 @@
 <template name="adminPostList">
     <section class="main">
         <h1>{{i18n "admin.posts"}}</h1>
-        <!-- <a href="{{pathFor 'adminPostEditor'}}">{{i18n "admin.posts.add"}}</a> -->
         <ul class="admin-post-list">
             {{#each posts}}
                 {{> adminPost}}
