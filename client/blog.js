@@ -1,29 +1,25 @@
 Perseid.subs.posts = Meteor.subscribe("posts");
 
-function yieldAdminItems() {
-    if (Meteor.userId()) {
-        this.render("adminPostActions", {to: "adminActions"})
-    }
-}
+var PostController = RouteController.extend({
+    waitOn: Perseid.subs.posts,
+    adminActionsTemplate: "adminPostActions"
+});
 
 Router.map(function(){
     this.route("postList", {
         path: "/posts",
-        waitOn: Perseid.subs.posts,
-        after: yieldAdminItems
+        controller: PostController
     });
 
     this.route("adminPostList", {
         path: "/admin/posts",
-        waitOn: Perseid.subs.posts,
-        after: yieldAdminItems
+        controller: PostController,
     });
 
     this.route("adminPostEditor", {
         template: "postEditor",
         path: "/admin/posts/editor/:_id?",
-        waitOn: Perseid.subs.posts,
-        after: yieldAdminItems,
+        controller: PostController,
         data: function () {
             if (!this.params._id) {
                 return;
