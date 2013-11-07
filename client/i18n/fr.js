@@ -1,6 +1,6 @@
 i18n.map("fr", {
-    "admin.posts": "Gérer les articles",
-    "admin.posts.add": "Ajouter un article",
+    "admin.posts": "Gérer articles",
+    "admin.posts.add": "Ajouter article",
     "admin.posts.edit": "Editer",
     "admin.posts.delete": "Supprimer",
     "admin.posts.editor.markdown": "Markdown",
