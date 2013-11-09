@@ -5,3 +5,8 @@ Meteor.publish("posts", function() {
 Meteor.startup(function() {
     Blog.smartfile.mkdir("uploads");
 });
+
+Blog.smartfile.allow = function(options) {
+    Perseid.checkUserId(this.userId);
+    return true;
+};
