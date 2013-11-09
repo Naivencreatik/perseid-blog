@@ -5,7 +5,7 @@ var PostController = RouteController.extend({
     adminActionsTemplate: "adminPostActions"
 });
 
-Router.map(function(){
+Router.map(function() {
     this.route("postList", {
         path: "/posts",
         controller: PostController
@@ -20,7 +20,7 @@ Router.map(function(){
         template: "postEditor",
         path: "/admin/posts/editor/:_id?",
         controller: PostController,
-        data: function () {
+        data: function() {
             if (!this.params._id) {
                 return;
             }

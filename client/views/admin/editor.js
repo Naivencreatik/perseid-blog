@@ -1,7 +1,7 @@
 //CodeMirror instance singleton
 var cm;
 
-Template.postEditor.created = function () {
+Template.postEditor.created = function() {
     //Edit mode
     if (this.data._id) {
         Session.set("postDraft", this.data.content);
@@ -13,19 +13,19 @@ Template.postEditor.created = function () {
 };
 
 Template.postEditor.events({
-    "click .post-editor-save": function (event, template) {
+    "click .post-editor-save": function(event, template) {
         var postTitle = template.find("#post-editor-title").value;
         var postDraft = Session.get("postDraft");
 
-        var checkErr = function (err) {
+        var checkErr = function(err) {
             if (err) {
-                Session.set("posts.editor.error", "admin.posts.editor.error")
+                Session.set("posts.editor.error", "admin.posts.editor.error");
             }
             else {
-                Session.set("posts.editor.error", null)
+                Session.set("posts.editor.error", null);
                 Router.go("adminPostList");
             }
-        }
+        };
 
         if (postTitle === "" || postDraft === "") {
             checkErr(true);
@@ -41,40 +41,40 @@ Template.postEditor.events({
     }
 });
 
-Template.postEditorCodeMirror.rendered = function () {
+Template.postEditorCodeMirror.rendered = function() {
     cm = CodeMirror(this.firstNode, {
       value: Session.get("postDraft"),
       mode: "markdown",
       lineWrapping: true
     });
 
-    cm.on("change", function(){
+    cm.on("change", function() {
         Session.set("postDraft", cm.getValue());
     });
 
-    cm.on("drop", function(instance, event){
+    cm.on("drop", function(instance, event) {
         event.preventDefault();
     });
 };
 
-Template.postEditorCodeMirror.destroyed = function () {
+Template.postEditorCodeMirror.destroyed = function() {
     cm = null;
 };
 
 
 Template.postEditorCodeMirror.events({
-    "dragover": function (event, template) {
+    "dragover": function(event, template) {
         event.stopPropagation();
         event.preventDefault();
         event.dataTransfer.dropEffect = 'copy';
     },
-    "dragenter": function (event, template) {
+    "dragenter": function(event, template) {
         $(template.firstNode).addClass("dragging");
     },
-    "dragleave": function (event, template) {
+    "dragleave": function(event, template) {
         $(template.firstNode).removeClass("dragging");
     },
-    "drop": function (event, template) {
+    "drop": function(event, template) {
         event.stopPropagation();
         event.preventDefault();
 
@@ -100,13 +100,13 @@ Template.postEditorCodeMirror.events({
 var converter = new Showdown.converter({ extensions: ['youtube.link', 'autolink']});
 
 Template.postEditorPreview.helpers({
-    "postPreview": function () {
+    "postPreview": function() {
         return new Handlebars.SafeString(converter.makeHtml(Session.get("postDraft")|| ""));
     }
 });
 
 Template.postEditorError.helpers({
-    "error": function () {
+    "error": function() {
         return Session.get("posts.editor.error");
     }
-})
+});

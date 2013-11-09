@@ -1,7 +1,7 @@
 Blog.colls.posts = new Meteor.Collection('posts');
 
 Meteor.methods({
-    "post.save": function (post) {
+    "post.save": function(post) {
         Perseid.checkUserId(this.userId);
         check(post.content, Perseid.match.NonEmptyString);
         check(post.title, Perseid.match.NonEmptyString);
@@ -17,7 +17,7 @@ Meteor.methods({
         Blog.colls.posts.update({_id: id}, {$set: {content: post.content, title: post.title}});
     },
 
-    "post.delete": function(id){
+    "post.delete": function(id) {
         Perseid.checkUserId(this.userId);
 
         Blog.colls.posts.remove({_id: id});

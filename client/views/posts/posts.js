@@ -1,5 +1,5 @@
 Template.postList.helpers({
-    posts: function () {
+    posts: function() {
         return Blog.colls.posts.find({}, {sort: {date: -1}});
     }
 });
@@ -7,12 +7,12 @@ Template.postList.helpers({
 var converter = new Showdown.converter({ extensions: ['youtube.embed', 'autolink']});
 
 Template.post.helpers({
-    postContent: function () {
+    postContent: function() {
         return new Handlebars.SafeString(converter.makeHtml(this.content));
     },
-    ago: function () {
+    ago: function() {
         var m = moment(this.date);
-        if(m.isBefore(moment().startOf('day'))){
+        if(m.isBefore(moment().startOf('day'))) {
             return m.format("L");
         }
         else {

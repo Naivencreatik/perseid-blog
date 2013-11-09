@@ -2,7 +2,7 @@ Package.describe({
   summary: "Meteor modular CMS - Blog component"
 });
 
-Package.on_use(function (api) {
+Package.on_use(function(api) {
   api.use([
     'perseid',
   ], ['client', 'server']);
